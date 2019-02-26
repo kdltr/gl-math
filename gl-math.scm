@@ -10,7 +10,7 @@
         srfi-4)
 (import-for-syntax srfi-1 matchable)
 
-(foreign-declare "#include <hypermath.h>")
+(foreign-declare "#include \"hypermath/src/hypermath.c\"")
 
 (define-syntax bind-math-fun
   (ir-macro-transformer

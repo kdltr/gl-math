@@ -3,7 +3,7 @@
  (author "Alex Charlton")
  (category math)
  (license "BSD")
- (dependencies matchable)
+ (dependencies srfi-1 matchable)
  (components
    (extension gl-math
-     (csc-options "-Ihypermath/include" "hypermath/src/hypermath.c"))))
+     (csc-options "-C" "-Ihypermath/include"))))
