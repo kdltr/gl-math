@@ -3,11 +3,12 @@
 A small math library aimed at gamedev that provides 4x4 float matrix, vector, and quaternion operations. Uses the [hypermath](https://github.com/AlexCharlton/hypermath) library.
 
 ## Installation
-This repository is a [Chicken Scheme](http://call-cc.org/) egg.
+This repository is a [Chicken Scheme](https://call-cc.org/) egg.
 
-It is part of the [Chicken egg index](http://wiki.call-cc.org/chicken-projects/egg-index-4.html) and can be installed with `chicken-install gl-math`.
+It is part of the [Chicken egg index](https://eggs.call-cc.org/5/) and can be installed with `chicken-install gl-math`.
 
 ## Requirements
+- srfi-1
 - matchable
 
 ## Documentation
@@ -330,8 +331,7 @@ Converts `ANGLE` from radians to degrees.
 ## Example
 
 ``` Scheme
-(import chicken scheme)
-(use gl-math)
+(import gl-math)
 
 (define projection-matrix
   (perspective 640 480 0.1 100 70))
@@ -348,6 +348,12 @@ Converts `ANGLE` from radians to degrees.
 ```
 
 ## Version history
+### Version 0.9.0
+15 March 2019
+
+* Maintenance given to [Kooda](/users/kooda)
+* Port to CHICKEN 5
+
 ### Version 0.8.0
 7 August 2014
 
@@ -412,12 +418,14 @@ Converts `ANGLE` from radians to degrees.
 * Initial release
 
 ## Source repository
-Source available on [GitHub](https://github.com/AlexCharlton/gl-math).
+Source available [here](https://www.upyum.com/cgit.cgi/gl-math/).
 
-Bug reports and patches welcome! Bugs can be reported via GitHub or to alex.n.charlton at gmail.
+Bug reports and patches welcome! Bugs can be reported to kooda@upyum.com
 
-## Author
+## Authors
 Alex Charlton
+
+Adrien (Kooda) Ramos
 
 ## Licence
 BSD
