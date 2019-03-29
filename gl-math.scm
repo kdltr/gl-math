@@ -8,9 +8,10 @@
         (chicken format)
         srfi-1
         srfi-4)
+
 (import-for-syntax srfi-1 matchable)
 
-(foreign-declare "#include \"hypermath/src/hypermath.c\"")
+(foreign-declare "#include \"./hypermath/include/hypermath.h\"")
 
 (define-syntax bind-math-fun
   (ir-macro-transformer

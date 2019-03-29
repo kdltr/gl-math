@@ -5,5 +5,9 @@
  (license "BSD")
  (dependencies srfi-1 matchable)
  (components
+   (c-object hypermath
+     (source "hypermath/src/hypermath.c")
+     (csc-options -C "-Ihypermath/include -O3"))
    (extension gl-math
-     (csc-options "-d0" "-O3" "-C" "-Ihypermath/include -O3"))))
+     (objects hypermath)
+     (csc-options -d0 -O3 -C "-Ihypermath/include -O3"))))
