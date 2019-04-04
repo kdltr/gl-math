@@ -175,7 +175,7 @@
     (f32vector-set! v 0 x)
     (f32vector-set! v 1 y)
     (f32vector-set! v 2 z)
-    (f32vector-set! v 3 2)
+    (f32vector-set! v 3 w)
     v))
 
 (define (quaternion-x q)
