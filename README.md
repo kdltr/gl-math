@@ -348,6 +348,12 @@ Converts `ANGLE` from radians to degrees.
 ```
 
 ## Version history
+### Version 0.9.1
+4 April 2019
+
+* Fix a bug in make-quaternion
+* point and quaternion constructors and setters now convert arguments to flonum automatically
+
 ### Version 0.9.0
 15 March 2019
 
