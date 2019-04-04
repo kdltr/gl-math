@@ -72,9 +72,9 @@
 ;;; Vector operations
 (define (make-point x y z #!optional non-gc?)
   (let ((v (make-f32vector 3 0 non-gc?)))
-    (f32vector-set! v 0 x)
-    (f32vector-set! v 1 y)
-    (f32vector-set! v 2 z)
+    (f32vector-set! v 0 (exact->inexact x))
+    (f32vector-set! v 1 (exact->inexact y))
+    (f32vector-set! v 2 (exact->inexact z))
     v))
 
 (define (point-x p)
@@ -87,13 +87,13 @@
   (f32vector-ref p 2))
 
 (define (point-x-set! p v)
-  (f32vector-set! p 0 v))
+  (f32vector-set! p 0 (exact->inexact v)))
 
 (define (point-y-set! p v)
-  (f32vector-set! p 1 v))
+  (f32vector-set! p 1 (exact->inexact v)))
 
 (define (point-z-set! p v)
-  (f32vector-set! p 2 v))
+  (f32vector-set! p 2 (exact->inexact v)))
 
 (define (m*vector! matrix vector)
   (cond
@@ -172,10 +172,10 @@
 ;;; Quaternion operations
 (define (make-quaternion x y z w #!optional non-gc?)
   (let ((v (make-f32vector 4 0 non-gc?)))
-    (f32vector-set! v 0 x)
-    (f32vector-set! v 1 y)
-    (f32vector-set! v 2 z)
-    (f32vector-set! v 3 w)
+    (f32vector-set! v 0 (exact->inexact x))
+    (f32vector-set! v 1 (exact->inexact y))
+    (f32vector-set! v 2 (exact->inexact z))
+    (f32vector-set! v 3 (exact->inexact w))
     v))
 
 (define (quaternion-x q)
@@ -191,16 +191,16 @@
   (f32vector-ref q 3))
 
 (define (quaternion-x-set! q v)
-  (f32vector-set! q 0 v))
+  (f32vector-set! q 0 (exact->inexact v)))
 
 (define (quaternion-y-set! q v)
-  (f32vector-set! q 1 v))
+  (f32vector-set! q 1 (exact->inexact v)))
 
 (define (quaternion-z-set! q v)
-  (f32vector-set! q 2 v))
+  (f32vector-set! q 2 (exact->inexact v)))
 
 (define (quaternion-w-set! q v)
-  (f32vector-set! q 3 v))
+  (f32vector-set! q 3 (exact->inexact v)))
 
 (bind-math-fun quaternion-normalize! "hpmQuatNormalize" void
                (q f32vector))
